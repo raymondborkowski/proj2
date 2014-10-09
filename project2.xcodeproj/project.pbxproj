@@ -11,6 +11,7 @@
 		3461877919E4C48900C4A02C /* project2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3461877819E4C48900C4A02C /* project2.1 */; };
 		3461878319E4C4B500C4A02C /* functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3461878019E4C4B500C4A02C /* functions.cpp */; };
 		3461878419E4C4B500C4A02C /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 3461878219E4C4B500C4A02C /* Makefile */; };
+		3461878C19E5A19000C4A02C /* container_of_pointers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3461878519E5A19000C4A02C /* container_of_pointers.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,13 @@
 		3461878019E4C4B500C4A02C /* functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = functions.cpp; sourceTree = "<group>"; };
 		3461878119E4C4B500C4A02C /* functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = functions.h; sourceTree = "<group>"; };
 		3461878219E4C4B500C4A02C /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		3461878519E5A19000C4A02C /* container_of_pointers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = container_of_pointers.cpp; sourceTree = "<group>"; };
+		3461878619E5A19000C4A02C /* pairing_priority_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pairing_priority_queue.h; sourceTree = "<group>"; };
+		3461878719E5A19000C4A02C /* heap_priority_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heap_priority_queue.h; sourceTree = "<group>"; };
+		3461878819E5A19000C4A02C /* sorted_priority_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sorted_priority_queue.h; sourceTree = "<group>"; };
+		3461878919E5A19000C4A02C /* poorman_priority_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poorman_priority_queue.h; sourceTree = "<group>"; };
+		3461878A19E5A19000C4A02C /* eecs281_priority_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eecs281_priority_queue.h; sourceTree = "<group>"; };
+		3461878B19E5A19000C4A02C /* P2random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2random.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,13 @@
 				3461878019E4C4B500C4A02C /* functions.cpp */,
 				3461878119E4C4B500C4A02C /* functions.h */,
 				3461878219E4C4B500C4A02C /* Makefile */,
+				3461878519E5A19000C4A02C /* container_of_pointers.cpp */,
+				3461878619E5A19000C4A02C /* pairing_priority_queue.h */,
+				3461878719E5A19000C4A02C /* heap_priority_queue.h */,
+				3461878819E5A19000C4A02C /* sorted_priority_queue.h */,
+				3461878919E5A19000C4A02C /* poorman_priority_queue.h */,
+				3461878A19E5A19000C4A02C /* eecs281_priority_queue.h */,
+				3461878B19E5A19000C4A02C /* P2random.h */,
 				3461877619E4C48900C4A02C /* main.cpp */,
 				3461877F19E4C4AA00C4A02C /* test.txt */,
 				3461877819E4C48900C4A02C /* project2.1 */,
@@ -127,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3461878C19E5A19000C4A02C /* container_of_pointers.cpp in Sources */,
 				3461878419E4C4B500C4A02C /* Makefile in Sources */,
 				3461877719E4C48900C4A02C /* main.cpp in Sources */,
 				3461878319E4C4B500C4A02C /* functions.cpp in Sources */,
