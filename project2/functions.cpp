@@ -8,7 +8,7 @@
 
 #include "functions.h"
 
-string getopt(int argc, char ** argv, bool & poor_man,bool &binary, bool &sorted, bool &pairing){
+void getopt(int argc, char ** argv, eecs281_priority_queue<mine*>*& heap){
     struct option longOpts[] = {
         {
             "container", required_argument, NULL, 'c'
@@ -22,32 +22,75 @@ string getopt(int argc, char ** argv, bool & poor_man,bool &binary, bool &sorted
         switch(opt) {
             case 'c':
                 if(strcmp(optarg,"BINARY")==0){
-                    binary = true;
+                    heap = new heap_priority_queue<mine*>();
                     break;
                 }
                 else if(strcmp(optarg,"POOR_MAN")==0){
-                    poor_man = true;
+                    heap = new poorman_priority_queue<mine*>;
                     break;
                 }
                 else if(strcmp(optarg,"SORTED")==0){
-                    sorted = true;
+                    heap = new sorted_priority_queue<mine*>;
                     break;
                 }
                 else if (strcmp(optarg,"PAIRING")==0){
-                    pairing = true;
+                    //need to change
+                    heap = new poorman_priority_queue<mine*>;
                     break;
                 }
+                else{
+                    cerr<<"YOU FORGOT THE FILE DUMMY\n";
+                    exit(1);
+                }
             case 's':
+                if(optarg){
+                    
+                }
                 break;
             case 'h':
                 cout << "This is a TNT game with priority Queues\n";
                 exit(0);
+            default:
+                cerr<<"You did something wrong";
+                exit(1);
         }
     }
     if(optind == '\0'){
         cerr<<"YOU FORGOT THE FILE DUMMY\n";
         exit(1);
     }
-    return argv[optind];
 }
+
+vector<string> &split(const string &s, char delim, vector<string> &elems) {
+    stringstream ss(s);
+    string item;
+    while (getline(ss, item, delim)) {
+        elems.push_back(item);
+    }
+    return elems;
+}
+
+int getInputMap(ifstream & file){
+    string temp;
+    getline(file, temp);
+    istringstream buf(temp);
+    istream_iterator<string> beg(buf), end;
+    vector<string> tokens(beg, end);
+    temp = tokens.back();
+    tokens.pop_back();
+    
+    return stoi(temp);
+}
+vector<string> getInputMapStart(ifstream & file){
+    string temp;
+    getline(file, temp);
+    istringstream buf(temp);
+    istream_iterator<string> beg(buf), end;
+    vector<string> tokens(beg, end);
+    
+    return tokens;
+}
+
+
+
 

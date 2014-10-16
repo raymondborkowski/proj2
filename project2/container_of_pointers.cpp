@@ -1,6 +1,8 @@
-#include <iostream>
+/*#include <iostream>
 #include <vector>
-#include "poorman_priority_queue.h" 
+//#include "poorman_priority_queue.h"
+//#include "sorted_priority_queue.h"
+#include "heap_priority_queue.h"
 
 using namespace std;
 
@@ -12,8 +14,8 @@ struct intptr_comp {
 };
 
 int main()    {
-  poorman_priority_queue<int *, intptr_comp> pmheap;
-  vector<int> owner = {10, 5, 20, 7};
+  heap_priority_queue<int *, intptr_comp> pmheap;
+  vector<int> owner = {6,0,71,6,46,33,47};
 
   for(auto &i : owner) // reference needed for next line
     pmheap.push(&i);   // so that this is the address of the value in owner
@@ -34,4 +36,4 @@ int main()    {
   // program should print 20 10 7 5
 
   return 0;
-}
+}*/

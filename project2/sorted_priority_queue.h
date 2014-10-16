@@ -2,6 +2,7 @@
 #define SORTED_PRIORITY_QUEUE_H
 
 #include "eecs281_priority_queue.h"
+#include <algorithm>
 
 //A specialized version of the 'priority_queue' ADT that is implemented with an
 //underlying sorted array-based container.
@@ -68,33 +69,41 @@ sorted_priority_queue<TYPE, COMP_FUNCTOR>::sorted_priority_queue(
   InputIterator end,
   COMP_FUNCTOR comp
 ) {
-  //Your code.
+ data = sorted_priority_queue(comp);
+  for (auto i = start; i != end; i++) {
+      data.push_back(i);
+  }
+    
 }
 
 template<typename TYPE, typename COMP_FUNCTOR>
 sorted_priority_queue<TYPE, COMP_FUNCTOR>::sorted_priority_queue(COMP_FUNCTOR comp) {
-  //Your code.
+    data = std::vector<TYPE>();
+    
+    this->compare = comp;
 }
 
 template<typename TYPE, typename COMP_FUNCTOR>
 void sorted_priority_queue<TYPE, COMP_FUNCTOR>::fix() {
-  //Your code.
+    
+    std::sort(data.rbegin(), data.rend(), this->compare);
 }
 
 template<typename TYPE, typename COMP_FUNCTOR>
 void sorted_priority_queue<TYPE, COMP_FUNCTOR>::push(const TYPE& val) {
-  //Your code.
+    data.push_back(val);
+    fix();
 }
 
 template<typename TYPE, typename COMP_FUNCTOR>
 void sorted_priority_queue<TYPE, COMP_FUNCTOR>::pop() {
-  //Your code.
+    data.pop_back();
 }
 
 template<typename TYPE, typename COMP_FUNCTOR>
 const TYPE& sorted_priority_queue<TYPE, COMP_FUNCTOR>::top() const {
   //Your code.
-  return TYPE(); //So that this sample implementation compiles.
+    return data[data.size()-1]; //So that this sample implementation compiles.
 }
 
 #endif //SORTED_PRIORITY_QUEUE_H

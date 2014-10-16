@@ -66,6 +66,7 @@ poorman_priority_queue<TYPE, COMP_FUNCTOR>::poorman_priority_queue(
   InputIterator end,
   COMP_FUNCTOR comp
 ) {
+    data = poorman_priority_queue(comp);
     for (auto i = start; i != end; i++) {
         data.push_back(*i);
     }
@@ -88,13 +89,16 @@ void poorman_priority_queue<TYPE, COMP_FUNCTOR>::push(const TYPE& val) {
 template<typename TYPE, typename COMP_FUNCTOR>
 void poorman_priority_queue<TYPE, COMP_FUNCTOR>::pop() {
     size_t i = 0;
+    size_t finalEl = data.size()-1;
     size_t size = data.size()-1;
-    while(size >0){
+    while(size > 0){
         if(this->compare(data[i],data[size])==true){
             i = size;
         }
         size--;
     }
+    //Switch the max el to the end so I can pop that *****
+    std::swap(data[i], data[finalEl]);
     data.pop_back();
 }
 

@@ -76,6 +76,7 @@
 			children = (
 				3461878019E4C4B500C4A02C /* functions.cpp */,
 				3461878119E4C4B500C4A02C /* functions.h */,
+				3461877619E4C48900C4A02C /* main.cpp */,
 				3461878219E4C4B500C4A02C /* Makefile */,
 				3461878519E5A19000C4A02C /* container_of_pointers.cpp */,
 				3461878619E5A19000C4A02C /* pairing_priority_queue.h */,
@@ -84,7 +85,6 @@
 				3461878919E5A19000C4A02C /* poorman_priority_queue.h */,
 				3461878A19E5A19000C4A02C /* eecs281_priority_queue.h */,
 				3461878B19E5A19000C4A02C /* P2random.h */,
-				3461877619E4C48900C4A02C /* main.cpp */,
 				3461877F19E4C4AA00C4A02C /* test.txt */,
 				3461877819E4C48900C4A02C /* project2.1 */,
 			);

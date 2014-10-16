@@ -5,42 +5,45 @@
 //  Created by Raymond Borkowski on 10/7/14.
 //  Copyright (c) 2014 Raymond Borkowski. All rights reserved.
 //
-/*
+#include <iostream>
+#include "poorman_priority_queue.h"
+#include "sorted_priority_queue.h"
+#include "heap_priority_queue.h"
+#include "eecs281_priority_queue.h"
 #include <iostream>
 #include "functions.h"
-#include <fstream>
+
+#include <vector>
 #include <sstream>
 #include "stdio.h"
 
 
 int main(int argc, char ** argv)
 {
-    bool poor_man = false, binary=false, sorted = false, pairing = false;
+    ios::sync_with_stdio (false);
+    eecs281_priority_queue<mine*>* heap = nullptr;
+    int roomSize, startRow, startCol;
+    vector<string> contain;
     string temp;
-    temp = getopt(argc, argv, poor_man, binary, sorted, pairing);
+    getopt(argc, argv, heap);
     //Will Remove file extension
     ifstream b_file ("/Users/RJB/Documents/classes/eecs281/project2/project2/" + temp);
     //Gets Input Type
-    getline(b_file, temp);
-    string inputType = temp;
-    //Throws away "Size:"
-    getline(b_file, temp, ':');
-    //gets the size number
-    getline(b_file, temp);
-    int roomSize = stoi(temp);
-
-    
-    
-    
-    if(inputType == "M"){
-        
-    }
-    else if(inputType == "R"){
-        
+    while (b_file.good()) {
+        getline(b_file, temp);
+        if(temp == "M"){
+            roomSize = getInputMap(b_file);
+            contain = getInputMapStart(b_file);
+            startCol = stoi(contain.back());
+            contain.pop_back();
+            startRow = stoi(contain.back());
+            
+        }
+        else if(temp == "R"){
+            
+        }
     }
     
     
     return 0;
 }
-
-*/
